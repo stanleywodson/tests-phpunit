@@ -5,6 +5,8 @@
 			colors="true"
 			testdox="true"
 			stopOnFailure="false"
+			executionOrder="default"
+			displayDetailsOnTestsThatTriggerDeprecations="true"
 >
 	<testsuites>
 		<testsuite name="default">

@@ -6,6 +6,13 @@ use PHPUnit\Framework\TestCase;
 
 class ValidateTest extends TestCase
 {
+	protected $validate;
+
+	public function setUp(): void
+	{
+		$this->validate = new Validate;
+	}
+	
 	public function test_validate_required()
 	{
 		$validate = new Validate;

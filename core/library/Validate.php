@@ -6,6 +6,6 @@ class Validate
 {
 	public function required()
 	{
-		
+		return false;
 	}
 }

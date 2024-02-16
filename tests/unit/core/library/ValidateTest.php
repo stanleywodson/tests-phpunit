@@ -1,13 +1,17 @@
 <?php
 namespace tests\unit\core\library;
 
+use core\library\Validate;
 use PHPUnit\Framework\TestCase;
 
 class ValidateTest extends TestCase
 {
 	public function test_validate_required()
 	{
-		$this->assertTrue(true);
+		$validate = new Validate;
+		$validated = $validate->required('name');
+
+		$this->assertArrayHasKey('name', ['name' => 'stanley']);
 	}
 	/** @test */
 	public function email()

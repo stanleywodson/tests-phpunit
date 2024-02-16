@@ -6,11 +6,20 @@ use PHPUnit\Framework\TestCase;
 
 class AuthTest extends TestCase
 {
+	protected $auth;
+	public function setup(): void
+	{
+			$this->auth = new Auth;
+	}
 	/** @test */
 	public function login()
 	{
-		$auth = new Auth;
-		$result = $auth->attempt();
+		$result = $this->auth->attempt();
 		$this->assertTrue($result);
 	}
+
+	// public function tearDown(): void
+	// {
+
+	// }
 }

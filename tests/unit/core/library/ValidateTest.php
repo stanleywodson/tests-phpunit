@@ -2,6 +2,7 @@
 namespace tests\unit\core\library;
 
 use core\library\Validate;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class ValidateTest extends TestCase
@@ -23,6 +24,10 @@ class ValidateTest extends TestCase
 	/** @test */
 	public function email()
 	{
-		$this->assertTrue(true);
+		$validate = new Validate;
+		
+		$this->expectException(Exception::class);
+		$validate->email('email');
+		
 	}
 }

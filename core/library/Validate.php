@@ -13,8 +13,8 @@ class Validate
 	public function email()
 	{
 		$email = 'stanley.wodson@gmail.com';
-		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			
+		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			throw new \Exception('Invalid email address');
 		}
 	}
 }

@@ -8,6 +8,12 @@
 			executionOrder="default"
 			displayDetailsOnTestsThatTriggerDeprecations="true"
 >
+	<php>
+		<env name="DB_HOST" value="localhost" />
+		<env name="DB_NAME" value="pusher" />
+		<env name="DB_USERNAME" value="root" />
+		<env name="DB_PASSWORD" value="" />
+	</php>
 	<testsuites>
 		<testsuite name="default">
 			<directory>tests</directory>
